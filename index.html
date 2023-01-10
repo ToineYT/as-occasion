@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulaire de remplissage automatique</title>
+    <script src="/jspdf.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 class="title"><span style="color: #36CFFF;">AS </span>OCCASION</h1>
+    <img class="logo" src="/content/logo.png">
+   <center><form id="form-auto-remplissage">
+      <label class="nom" for="nom">Nom Véhicule:</label>
+      <input type="text" id="nom" name="nothing">
+      <br>
+      <label class="prenom" for="prenom">Nombre de sieges:</label>
+      <input type="text" id="prenom" name="prenothingnom">
+      <br>
+      <label class="email" for="email">Volume du coffre:</label>
+      <input type="text" id="email" name="nothing">
+      <br>
+      <label class="tel" for="telephone">Plaque vehicule:</label>
+      <input type="text" id="telephone" name="nothing">
+      <br>
+      <label class="tel" for="telephone">Autres:</label>
+      <input type="text" id="other" name="nothing">
+      <br>
+      <label class="tel" for="telephone">Prix:</label>
+      <input type="text" id="price" name="nothing">
+      <br>
+      <label class="image" for="image">Ajoutez une image:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+      <br>
+      <input type="submit" value="Télécharger">
+    </form></center>
+<h1 class="title footer">Par Toine - 1.0.1</h1>
+    <script>
+
+const form = document.getElementById("form-auto-remplissage");
+const nom = document.getElementById("nom");
+const prenom = document.getElementById("prenom");
+const email = document.getElementById("email");
+const other = document.getElementById("other");
+const price = document.getElementById("price");
+const telephone = document.getElementById("telephone");
+const image = document.getElementById("image");
+const imgFond = new Image();
+
+
+imgFond.src = 'content/fond.jpeg';
+imgFond.onload = function(){
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // read the image file
+        const file = image.files[0];
+        const reader  = new FileReader();
+
+        reader.onloadend = () => {
+            // Remplissage automatique des champs de document
+            const doc = new jsPDF();
+
+            // Add background image
+            doc.addImage(imgFond, 'JPEG', 0, 0, 210, 297);
+
+            // change text color 
+            doc.setFontStyle("bold");
+            doc.setTextColor(255, 255, 255); // red
+            doc.text(20, 160, "Nom Véhicule: " + nom.value);
+            doc.text(20, 170, "Nombre de sieges: " + prenom.value);
+            doc.text(20, 180, "Volume du coffre: " + email.value);
+            doc.text(20, 190, "Plaque vehicule: " + telephone.value);
+            doc.text(20, 200, "Autres: " + other.value);
+            doc.text(20, 210, "Prix: " + price.value);
+            // Ajoutez l'image au document PDF
+            if (file) {
+                doc.addImage(reader.result, 'JPEG', 15, 30, 150, 100);
+            }
+            doc.save("document-rempli.pdf");
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    });
+}
+
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600&display=swap');
+
+body {
+    background: #464646;
+}
+
+* {
+    font-family: 'Epilogue', sans-serif;
+}
+.title {
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    cursor: default;
+}
+
+.logo {
+    height: 120px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+
+input[type="text"]{
+    width:400px;
+    height:45px;
+    background:#ffffff;
+    border:4px solid #36CFFF;
+    border-radius:4px;
+    font-size:18px;
+    padding-left:8px;
+  }
+  input[type="text"]:focus{
+    border:4px solid #36CFFF;
+    outline:none;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+
+  #errorMsg{
+    color:red;
+    text-align:left;
+    margin-top:2px;
+  }
+
+
+  .nom {
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    margin-top: -19px;
+    position: fixed;
+  }
+
+  #prenom {
+    margin-top: 30px;
+  }
+  
+  .prenom {
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    margin-top: 13px;
+    position: fixed;
+  }
+
+  #email {
+    margin-top: 30px;
+  }
+
+  .email {
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    margin-top: 13px;
+    position: fixed;
+  }
+
+  #telephone {
+        margin-top: 30px;
+  }
+
+  #price {
+    margin-top: 30px;
+}
+
+#other {
+    margin-top: 30px;
+}
+
+  .tel {
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    margin-top: 13px;
+    position: fixed;
+  }
+  [type="file"] {
+    /* Style the color of the message that says 'No file chosen' */
+      color: white;
+    }
+    [type="file"]::-webkit-file-upload-button {
+      background: #36CFFF;
+      border: 2px solid #36CFFF;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      outline: none;
+      padding: 10px 25px;
+      text-transform: uppercase;
+      transition: all 1s ease;
+      font-family: 'Epilogue', sans-serif;
+    }
+
+#image {
+    margin-left: -107px;
+    margin-top: 36px;
+}
+    
+    .image {
+        color: white;
+        font-family: 'Epilogue', sans-serif;
+        margin-top: 13px;
+        margin-left: -107px;
+        position: fixed;
+    }
+
+    [type="submit"]{
+        background: #36CFFF;
+        border: 2px solid #36CFFF;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px;
+        outline: none;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        transition: all 1s ease;
+        font-family: 'Epilogue', sans-serif;
+        margin-top: 15px;
+      }
+
+      .footer {
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+      }
