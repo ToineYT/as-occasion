@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1 class="title"><span style="color: #36CFFF;">AS </span>OCCASION</h1>
-    <img class="logo" src="/content/logo.png">
+    <img class="logo" src="https://raw.githubusercontent.com/ToineYT/as-occasion/main/content/logo.png">
    <center><form id="form-auto-remplissage">
       <label class="nom" for="nom">Nom Véhicule:</label>
       <input type="text" id="nom" name="nothing">
@@ -46,7 +46,7 @@ const image = document.getElementById("image");
 const imgFond = new Image();
 
 
-imgFond.src = 'content/fond.jpeg';
+imgFond.src = 'https://raw.githubusercontent.com/ToineYT/as-occasion/main/content/fond.jpeg';
 imgFond.onload = function(){
     form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -75,7 +75,7 @@ imgFond.onload = function(){
             if (file) {
                 doc.addImage(reader.result, 'JPEG', 15, 30, 150, 100);
             }
-            doc.save("document-rempli.pdf");
+            doc.save("document.pdf");
         }
 
         if (file) {
