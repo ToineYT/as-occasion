@@ -30,7 +30,7 @@
       <label class="image" for="image">Ajoutez une image:</label>
       <input type="file" id="image" name="image" accept="image/*">
       <br>
-      <input type="submit" value="Télécharger">
+      <input id="btn" type="submit" value="Télécharger">
     </form></center>
 <h1 class="title footer">Par Toine - 1.0.1</h1>
     <script>
@@ -44,12 +44,16 @@ const price = document.getElementById("price");
 const telephone = document.getElementById("telephone");
 const image = document.getElementById("image");
 const imgFond = new Image();
+const btn = document.getElementById("btn")
 
 
 imgFond.src = 'https://raw.githubusercontent.com/ToineYT/as-occasion/main/content/fond.jpeg';
 imgFond.onload = function(){
     form.addEventListener("submit", (event) => {
+
         event.preventDefault();
+        // Change le texte du bouton lorsque l'utilisateur clique sur lui
+        btn.innerHTML = "En cours...";
 
         // read the image file
         const file = image.files[0];
