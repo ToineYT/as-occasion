@@ -147,3 +147,20 @@ input[type="text"]{
         font-size: 20px;
         transform: translate(-50%, -50%);
       }
+      .github {
+        color: white;
+        transition: all ease-in-out .1s;
+      }
+      .github:hover {
+        color: #36CFFF;
+        transition: all ease-in-out .1s;
+      }
+
+      .insta {
+        color: white;
+        transition: all ease-in-out .1s;
+      }
+      .insta:hover {
+        color: rgb(141, 2, 2);
+        transition: all ease-in-out .1s;
+      }
